@@ -2,7 +2,7 @@ name: update gist
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "* * * * *"
   workflow_dispatch:
 
 jobs:
@@ -31,5 +31,5 @@ jobs:
       - run: npm start
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GIST_ID: 64dacee1c6c93cdbcf48548f6598f823
+          GIST_ID: 4158d79cb9297c46f0ded262a9eded96
           USERNAME: ${{ github.actor }}
